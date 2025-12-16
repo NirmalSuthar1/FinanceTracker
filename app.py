@@ -82,9 +82,6 @@ if not df.empty:
 
     # Check if data has changed (rows deleted)
     if len(edited_df) != len(df):
-        # We need to update the CSV. 
-        # Note: st.data_editor returns the current state of the dataframe.
-        # If rows were deleted, they are missing from edited_df.
         dm.update_data(edited_df)
         st.rerun()
 
